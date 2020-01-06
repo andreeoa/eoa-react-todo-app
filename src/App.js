@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TodoApp from "./components/TodoApp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav>
+        <div className="nav-wrapper">
+          <a href="!#" className="brand-logo" style={{ marginLeft: "20px" }}>
+            EOA App
+          </a>
+          <ul
+            id="nav-mobile"
+            className="right hide-on-med-and-down"
+            style={{ marginRight: "20px" }}
+          >
+            <li>
+              <a href="!#">Item 1</a>
+            </li>
+            <li>
+              <a href="!#">Item 2</a>
+            </li>
+            <li>
+              <a href="!#">Item 3</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div className="container">
+        <TodoApp />
+      </div>
     </div>
   );
 }
